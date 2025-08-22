@@ -1,0 +1,431 @@
+[
+  {
+    "name": "Suno",
+    "slug": "suno",
+    "category": "AI-musikk",
+    "pricing": "Gratis & Betalt",
+    "url": "https://suno.com",
+    "description": "Musikkgenerator med støtte for både tekst og lydinnspillinger.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Udio",
+    "slug": "udio",
+    "category": "AI-musikk",
+    "pricing": "Gratis & Betalt",
+    "url": "https://www.udio.com",
+    "description": "AI-musikkgenerator for neste generasjons musikkskapere.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "ElevenLabs",
+    "slug": "elevenlabs",
+    "category": "AI-stemmer",
+    "pricing": "Gratis & Betalt",
+    "url": "https://elevenlabs.io",
+    "description": "Skap naturtro AI-stemmer til video, spill og bøker.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Firefly (Adobe)",
+    "slug": "firefly-adobe",
+    "category": "Bildegenerering",
+    "pricing": "Betalt",
+    "url": "https://www.adobe.com/sensei/generative-ai/firefly.html",
+    "description": "Adobes AI-verktøy for bilder, grafikk og kreative effekter.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Stable Diffusion XL",
+    "slug": "stable-diffusion-xl",
+    "category": "Bildegenerering",
+    "pricing": "Gratis",
+    "url": "https://stablediffusionweb.com/",
+    "description": "Åpen AI-bildegenerator – kjør lokalt eller via web.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Canva",
+    "slug": "canva",
+    "category": "Grafikk / Design",
+    "pricing": "Gratis & Betalt",
+    "url": "https://www.canva.com",
+    "description": "Designverktøy med AI-støtte for bilder, grafikk og presentasjoner.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "DeepL",
+    "slug": "deepl",
+    "category": "Oversettelse",
+    "pricing": "Gratis & Betalt",
+    "url": "https://www.deepl.com",
+    "description": "Markedets mest presise AI-oversetter for tekst og dokumenter.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Claude",
+    "slug": "claude",
+    "category": "Språkmodell / Chatbot",
+    "pricing": "Gratis & Betalt",
+    "url": "https://claude.ai",
+    "description": "AI-chatbot fra Anthropic, kjent for trygghet og stor kontekst.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Copilot (Microsoft)",
+    "slug": "copilot-microsoft",
+    "category": "Språkmodell / Chatbot",
+    "pricing": "Gratis & Betalt",
+    "url": "https://copilot.microsoft.com",
+    "description": "AI-assistent fra Microsoft, integrert i Edge, Windows og 365.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Gemini",
+    "slug": "gemini",
+    "category": "Språkmodell / Chatbot",
+    "pricing": "Gratis & Betalt",
+    "url": "https://gemini.google.com",
+    "description": "Googles AI-modell, integrert i Gmail, Drive og flere Google-tjenester.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Perplexity AI",
+    "slug": "perplexity-ai",
+    "category": "Språkmodell / Chatbot",
+    "pricing": "Gratis & Betalt",
+    "url": "https://www.perplexity.ai",
+    "description": "Chatbot og søkemotor med støtte for flere store språkmodeller.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Wordtune",
+    "slug": "wordtune",
+    "category": "Tekst / Assistent",
+    "pricing": "Gratis & Betalt",
+    "url": "https://www.wordtune.com",
+    "description": "Forbedre, forkorte eller utvid tekst automatisk.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Writesonic",
+    "slug": "writesonic",
+    "category": "Tekst / Assistent",
+    "pricing": "Gratis & Betalt",
+    "url": "https://writesonic.com",
+    "description": "AI-skriveverktøy for annonser, blogg, e-post m.m.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Jasper",
+    "slug": "jasper",
+    "category": "Tekst / Skriving",
+    "pricing": "Betalt",
+    "url": "https://www.jasper.ai",
+    "description": "AI-verktøy for tekstgenerering, markedsføring, blogg og teamarbeid.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Descript",
+    "slug": "descript",
+    "category": "Video / Bilde",
+    "pricing": "Gratis & Betalt",
+    "url": "https://www.descript.com",
+    "description": "AI-verktøy for redigering av lyd, teksting og video.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Pictory",
+    "slug": "pictory",
+    "category": "Video / Bilde",
+    "pricing": "Betalt",
+    "url": "https://pictory.ai",
+    "description": "AI-video fra tekst – lag videoer til markedsføring og SoMe.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "RunwayML",
+    "slug": "runwayml",
+    "category": "Video / Bilde",
+    "pricing": "Gratis & Betalt",
+    "url": "https://runwayml.com",
+    "description": "Kraftig AI-verktøy for video, bilder og kreativ produksjon.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Synthesia",
+    "slug": "synthesia",
+    "category": "Video / Bilde",
+    "pricing": "Betalt",
+    "url": "https://www.synthesia.io",
+    "description": "Lag videoer med AI-genererte avatarer og stemmer.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "ChatGPT",
+    "slug": "chatgpt",
+    "category": "Språkmodell / Chatbot",
+    "pricing": "Gratis & Betalt",
+    "url": "https://chat.openai.com/",
+    "description": "Allsidig AI-assistent for tekst, analyse og koding.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Mistral / Le Chat",
+    "slug": "mistral-le-chat",
+    "category": "Språkmodell / Chatbot",
+    "pricing": "Gratis & Betalt",
+    "url": "https://chat.mistral.ai/",
+    "description": "Rask, lettvekts AI-chat fra Mistral – gode åpne modeller.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Pi AI",
+    "slug": "pi-ai",
+    "category": "Språkmodell / Chatbot",
+    "pricing": "Gratis & Betalt",
+    "url": "https://pi.ai/",
+    "description": "Samtaleorientert assistent med fokus på veiledning og refleksjon.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "DALL·E",
+    "slug": "dall-e",
+    "category": "Bildegenerering",
+    "pricing": "Gratis & Betalt",
+    "url": "https://openai.com/dall-e",
+    "description": "Tekst-til-bilde fra OpenAI; integrert i flere verktøy.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "category": "Bildegenerering",
+    "pricing": "Betalt",
+    "url": "https://www.midjourney.com/",
+    "description": "Høy kvalitet bildegenerering via Discord-kommandoer.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Leonardo AI",
+    "slug": "leonardo-ai",
+    "category": "Bildegenerering",
+    "pricing": "Gratis & Betalt",
+    "url": "https://leonardo.ai/",
+    "description": "Bilder og assets – godt egnet for spill/konseptkunst.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Pika Labs",
+    "slug": "pika-labs",
+    "category": "Video / Bilde",
+    "pricing": "Gratis & Betalt",
+    "url": "https://pika.art/",
+    "description": "Tekst-til-video og stiliserte klipp på sekunder.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Kaiber",
+    "slug": "kaiber",
+    "category": "Video / Bilde",
+    "pricing": "Gratis & Betalt",
+    "url": "https://kaiber.ai/",
+    "description": "Gjør bilder/kunst til bevegelige musikkvideoer og klipp.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Play.ht",
+    "slug": "play-ht",
+    "category": "AI-stemmer",
+    "pricing": "Gratis & Betalt",
+    "url": "https://play.ht/",
+    "description": "Naturlig TTS og stemmekloning – mange språk/dialekter.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Lovo.ai",
+    "slug": "lovo-ai",
+    "category": "AI-stemmer",
+    "pricing": "Gratis & Betalt",
+    "url": "https://lovo.ai/",
+    "description": "Voice-overs med god emosjon – enkelt å bruke.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Boomy",
+    "slug": "boomy",
+    "category": "AI-musikk",
+    "pricing": "Gratis & Betalt",
+    "url": "https://boomy.com/",
+    "description": "Lag sanger på sekunder – del på strømmetjenester.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Aiva",
+    "slug": "aiva",
+    "category": "AI-musikk",
+    "pricing": "Gratis & Betalt",
+    "url": "https://aiva.ai/",
+    "description": "AI-komponist for klassisk/filmmusikk og spill.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Grammarly",
+    "slug": "grammarly",
+    "category": "Tekst / Assistent",
+    "pricing": "Gratis & Betalt",
+    "url": "https://www.grammarly.com/",
+    "description": "Korrektur, tonejustering og forslag – skriv klarere.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Quillbot",
+    "slug": "quillbot",
+    "category": "Tekst / Assistent",
+    "pricing": "Gratis & Betalt",
+    "url": "https://quillbot.com/",
+    "description": "Omskriving og oppsummering med grammatikkhjelp.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  },
+  {
+    "name": "Google Translate",
+    "slug": "google-translate",
+    "category": "Oversettelse",
+    "pricing": "Gratis",
+    "url": "https://translate.google.com/",
+    "description": "Rask oversettelse, kamera/lyd-støtte og mange språk.",
+    "logo": "",
+    "languages": [],
+    "platforms": [
+      "Web"
+    ]
+  }
+]

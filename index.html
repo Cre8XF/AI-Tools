@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI‑verktøykassa</title>
+  <meta name="description" content="Finn riktig AI‑verktøy – filtrer, søk, sorter og lagre favoritter.">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Hopp til innhold</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="branding">
+        <h1>🤖 AI‑verktøykassa</h1>
+        <p class="tagline">Finn, filtrer og sammenlign AI‑verktøy raskt.</p>
+      </div>
+
+      <form id="filters" class="filters" role="search" aria-label="Filtre og søk">
+        <label class="sr-only" for="q">Søk</label>
+        <input id="q" name="q" type="search" placeholder="Søk på navn, beskrivelse …" autocomplete="off" />
+
+        <label class="sr-only" for="pricing">Pris</label>
+        <select id="pricing" name="pricing" aria-label="Filter for pris">
+          <option value="">Alle priser</option>
+          <option value="Gratis">Gratis</option>
+          <option value="Betalt">Betalt</option>
+          <option value="Gratis & Betalt">Gratis & Betalt</option>
+          <option value="Gratis og betalt">Gratis og betalt</option>
+        </select>
+
+        <label class="sr-only" for="sort">Sorter</label>
+        <select id="sort" name="sort" aria-label="Sortering">
+          <option value="name-asc">Navn A–Å</option>
+          <option value="name-desc">Navn Å–A</option>
+          <option value="category-asc">Kategori A–Å</option>
+        </select>
+
+        <label class="toggle">
+          <input id="favsOnly" type="checkbox" />
+          <span>⭐ Favoritter</span>
+        </label>
+      <label class="sr-only" for="platform">Plattform</label>
+  <select id="platform" name="platform" aria-label="Filter for plattform">
+    <option value="">Alle plattformer</option>
+  </select>
+
+  <label class="sr-only" for="language">Språk</label>
+  <select id="language" name="language" aria-label="Filter for språk">
+    <option value="">Alle språk</option>
+  </select>
+</form>
+
+      <nav id="catChips" class="chips" aria-label="Kategorier"></nav>
+    </div>
+  </header>
+
+  <main id="content" class="page" role="main">
+    <section id="resultsMeta" class="results-meta" aria-live="polite"></section>
+    <div id="list" class="category-list"></div>
+  </main>
+
+  <footer class="site-foot">
+    <p>Bygget for rask oversikt. Lagre favoritter lokalt, del filtrene via URL.</p>
+  </footer>
+
+  <template id="sectionTpl">
+    <section class="category-section" data-cat="">
+      <button class="section-head" type="button" aria-expanded="true">
+        <h2 class="cat-title"></h2>
+        <span class="cat-count"></span>
+      </button>
+      <p class="cat-desc"></p>
+      <div class="grid"></div>
+    </section>
+  </template>
+
+  <template id="cardTpl">
+    <article class="tool-card" data-name="" data-category="" data-pricing="">
+      <header class="tool-head">
+        <h3 class="tool-name"></h3>
+        <div class="tool-actions">
+          <button class="fav-btn" title="Legg til i favoritter" aria-pressed="false">⭐</button>
+          <a class="detail-link" title="Vis detaljer">Mer</a>
+        </div>
+      </header>
+      <p class="tool-desc"></p>
+      <footer class="tool-meta">
+        <span class="pill price"></span>
+        <a class="pill link" target="_blank" rel="noopener noreferrer">Åpne</a>
+        <a class="pill review" target="_blank" rel="noopener noreferrer" hidden>Test</a>
+      </footer>
+    </article>
+  </template>
+
+  <script type="module" src="ai.js"></script>
+</body>
+</html>

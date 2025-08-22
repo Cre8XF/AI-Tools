@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verktøy – detaljer</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .detail-page{max-width:1100px;margin:0 auto;padding:1rem 1.25rem 2rem}
+    .crumbs{color:var(--muted);margin:.5rem 0 1rem}
+    .detail-head{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start}
+    .title{margin:0}.meta{display:flex;gap:.5rem;flex-wrap:wrap}
+    .md{margin-top:1rem;line-height:1.65}
+    .md h2,.md h3{margin-top:1.25em}
+    .md pre{overflow:auto;background:#0f1423;border:1px solid var(--border);border-radius:.6rem;padding:.75rem}
+    .md code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+    .back{color:#cfe1ff}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="branding">
+        <h1>🤖 AI‑verktøykassa</h1>
+        <p class="tagline">Detaljert guide for verktøy.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="detail-page">
+    <nav class="crumbs"><a class="back" href="index.html">← Tilbake til oversikten</a></nav>
+    <div id="head" class="detail-head">
+      <div>
+        <h2 id="title" class="title"></h2>
+        <p id="desc"></p>
+      </div>
+      <div class="meta">
+        <span id="platforms" class="pill"></span>
+        <span id="languages" class="pill"></span>
+        <span class="pill price"></span>
+        <span class="pill category"></span>
+        <a id="open" class="pill link" target="_blank" rel="noopener">Åpne</a>
+        <a id="review" class="pill review" target="_blank" rel="noopener" hidden>Test</a>
+      </div>
+    </div>
+
+    <article id="md" class="md">Laster…</article>
+  </main>
+
+  <script>
+    const $ = (s,r=document)=>r.querySelector(s);
+    const slug = new URLSearchParams(location.search).get('tool') || '';
+    let tool;
+    fetch('ai.json',{cache:'no-store'}).then(r=>r.json()).then(data=>{
+      tool = data.find(t => (t.slug || t.name.toLowerCase().replace(/[^a-z0-9]+/g,'-')) === slug);
+      if(!tool){ $('#md').textContent='Fant ikke verktøy.'; return; }
+      $('#title').textContent = tool.name || 'Uten navn';
+      $('#desc').textContent = tool.description || '';
+      $('.price').textContent = tool.pricing || 'Ukjent';
+      $('.category').textContent = tool.category || 'Uten kategori';
+      const open = $('#open'); open.href = tool.url || '#';
+      const ps=$('#platforms'); const ls=$('#languages'); ps.textContent = (tool.platforms||[]).join(', ') || ''; ls.textContent = (tool.languages||[]).join(', ') || '';
+      const rev = $('#review'); if(tool.review){ rev.hidden=false; rev.href=tool.review; }
+      loadMarkdown(slug);
+    });
+
+    async function loadMarkdown(slug){
+      const paths = [`tools/${slug}/index.md`,`tools/${slug}.md`];
+      for(const p of paths){
+        try{
+          const r = await fetch(p, {cache:'no-store'});
+          if(r.ok){ const md = await r.text(); $('#md').innerHTML = renderMD(md); return; }
+        }catch(e){}
+      }
+      $('#md').textContent = 'Ingen detaljside enda. Legg en Markdown-fil i tools/'+slug+'/index.md';
+    }
+    function renderMD(src){
+      src = src.replace(/[&<>]/g, s=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[s]));
+      src = src.replace(/```([\s\S]*?)```/g, (m,code)=>'<pre><code>'+code+'</code></pre>');
+      src = src.replace(/^###\s*(.*)$/gm,'<h3>$1</h3>');
+      src = src.replace(/^##\s*(.*)$/gm,'<h2>$1</h2>');
+      src = src.replace(/^#\s*(.*)$/gm,'<h1>$1</h1>');
+      src = src.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+      src = src.replace(/\*([^*]+)\*/g,'<em>$1</em>');
+      src = src.replace(/\[([^\]]+)\]\((https?:[^\)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+      src = src.replace(/!\[([^\]]*)\]\((https?:[^\)]+)\)/g,'<img alt="$1" src="$2" style="max-width:100%;border:1px solid var(--border);border-radius:.6rem">');
+      src = src.replace(/(^|\n)\s*[-•]\s+([^\n]+)/g,'$1<li>$2</li>');
+      src = src.replace(/(<li>[^<]+<\/li>\s*)+/g, m=>'<ul>'+m+'</ul>');
+      src = src.replace(/(^|\n)([^<\n][^\n]*)/g, (m,br,t)=>{
+        if(/^\s*$/.test(t)) return m;
+        if(/^<\/?(h\d|ul|li|pre|img|p|blockquote)/.test(t)) return m;
+        return br+'<p>'+t+'</p>';
+      });
+      return src;
+    }
+  </script>
+</body>
+</html>
