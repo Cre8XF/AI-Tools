@@ -499,3 +499,101 @@ button {
     margin-inline: auto;
   }
 }
+/* Skjermleser-klasse hvis du ikke har den */
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Sørg for at knappen faktisk vises på mobil, og skjules på større skjermer */
+@media (max-width: 640px) {
+  #filterToggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.8rem;
+    border-radius: 0.6rem;
+    border: 1px solid var(--border);
+    background: var(--panel);
+  }
+  /* Skjul avansert-blokka som standard */
+  .filters-advanced {
+    display: none;
+  }
+  /* Vis når togglet */
+  .filters-advanced.is-open {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Sørg for at grunnfilter ligger over chips, så knappen er klikkbar */
+  .filters-basic {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Nettbrett/desktop: alltid vis avanserte filtre, skjul knappen */
+@media (min-width: 641px) {
+  #filterToggle {
+    display: none;
+  }
+  .filters-advanced {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Hvis chip-raden kommer rett etter filtrene: senk z-index så den ikke dekker knappen */
+.chips,
+.chip-row {
+  position: relative;
+  z-index: 1;
+}
+/* Sikre at avanserte filtre vises når togglet, også på små skjermer */
+@media (max-width: 640px) {
+  .filters-advanced.is-open {
+    display: grid !important;
+    gap: 0.6rem;
+    grid-template-columns: 1fr 1fr; /* to kolonner side om side */
+  }
+}
+@media (min-width: 641px) {
+  .filters-advanced {
+    display: grid !important;
+    gap: 0.6rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+#filterToggle {
+  max-width: 100%;
+}
+@media (max-width: 640px) {
+  /* La knappen ta hele raden og bli tydelig */
+  #filterToggle {
+    grid-column: 1 / -1; /* full bredde */
+    justify-self: stretch;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0.1rem;
+  }
+
+  /* Litt luft mellom filtrene og chips så de ikke “spiser” knappen */
+  .chips {
+    margin-top: 0.5rem;
+  }
+
+  /* Når avansert er åpen: litt luft over */
+  .filters-advanced.is-open {
+    margin-top: 0.25rem;
+  }
+}

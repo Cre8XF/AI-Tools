@@ -96,9 +96,24 @@ function buildPlatformLanguage(){
   if(lSel){ const cur = lSel.value; lSel.innerHTML = '<option value="">Alle språk</option>' + [...ls].sort((a,b)=>a.localeCompare(b,'nb')).map(x=>`<option value="${x}">${x}</option>`).join(''); lSel.value = cur; }
 }
 (function(){
-    const btn = document.getElementById('filterToggle');
-    const adv = document.getElementById('filtersAdvanced');
-    if(btn && adv){
-      btn.addEventListener('click', ()=> adv.classList.toggle('is-open'));
-    }
-  })();
+  const btn = document.getElementById('filterToggle');
+  const adv = document.getElementById('filtersAdvanced');
+  if (!btn || !adv) return;
+
+  // starttilstand (lukket på mobil)
+  btn.setAttribute('aria-expanded', 'false');
+
+  const setLabel = () => {
+    const open = adv.classList.contains('is-open');
+    btn.textContent = open ? 'Færre filtre' : 'Flere filtre';
+    btn.setAttribute('aria-expanded', String(open));
+  };
+
+  btn.addEventListener('click', () => {
+    adv.classList.toggle('is-open');
+    setLabel();
+  });
+
+  // sikre korrekt label ved førstegangslast
+  setLabel();
+})();
