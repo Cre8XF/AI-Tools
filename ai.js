@@ -95,3 +95,10 @@ function buildPlatformLanguage(){
   if(pSel){ const cur = pSel.value; pSel.innerHTML = '<option value="">Alle plattformer</option>' + [...ps].sort((a,b)=>a.localeCompare(b,'nb')).map(x=>`<option value="${x}">${x}</option>`).join(''); pSel.value = cur; }
   if(lSel){ const cur = lSel.value; lSel.innerHTML = '<option value="">Alle språk</option>' + [...ls].sort((a,b)=>a.localeCompare(b,'nb')).map(x=>`<option value="${x}">${x}</option>`).join(''); lSel.value = cur; }
 }
+(function(){
+    const btn = document.getElementById('filterToggle');
+    const adv = document.getElementById('filtersAdvanced');
+    if(btn && adv){
+      btn.addEventListener('click', ()=> adv.classList.toggle('is-open'));
+    }
+  })();

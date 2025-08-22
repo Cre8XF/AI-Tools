@@ -19,39 +19,50 @@
       </div>
 
       <form id="filters" class="filters" role="search" aria-label="Filtre og søk">
-        <label class="sr-only" for="q">Søk</label>
-        <input id="q" name="q" type="search" placeholder="Søk på navn, beskrivelse …" autocomplete="off" />
-
-        <label class="sr-only" for="pricing">Pris</label>
-        <select id="pricing" name="pricing" aria-label="Filter for pris">
-          <option value="">Alle priser</option>
-          <option value="Gratis">Gratis</option>
-          <option value="Betalt">Betalt</option>
-          <option value="Gratis & Betalt">Gratis & Betalt</option>
-          <option value="Gratis og betalt">Gratis og betalt</option>
-        </select>
-
-        <label class="sr-only" for="sort">Sorter</label>
-        <select id="sort" name="sort" aria-label="Sortering">
-          <option value="name-asc">Navn A–Å</option>
-          <option value="name-desc">Navn Å–A</option>
-          <option value="category-asc">Kategori A–Å</option>
-        </select>
-
-        <label class="toggle">
-          <input id="favsOnly" type="checkbox" />
-          <span>⭐ Favoritter</span>
-        </label>
-      <label class="sr-only" for="platform">Plattform</label>
-  <select id="platform" name="platform" aria-label="Filter for plattform">
-    <option value="">Alle plattformer</option>
-  </select>
-
-  <label class="sr-only" for="language">Språk</label>
-  <select id="language" name="language" aria-label="Filter for språk">
-    <option value="">Alle språk</option>
-  </select>
-</form>
+        <!-- Grunnfilter -->
+        <div class="filters-basic">
+          <label class="sr-only" for="q">Søk</label>
+          <input id="q" name="q" class="search" type="search" placeholder="Søk på navn, beskrivelse …" autocomplete="off"
+            inputmode="search" enterkeyhint="search" />
+      
+          <label class="sr-only" for="pricing">Pris</label>
+          <select id="pricing" name="pricing" aria-label="Filter for pris">
+            <option value="">Alle priser</option>
+            <option value="Gratis">Gratis</option>
+            <option value="Betalt">Betalt</option>
+            <option value="Gratis & Betalt">Gratis & Betalt</option>
+            <option value="Gratis og betalt">Gratis og betalt</option>
+          </select>
+      
+          <label class="sr-only" for="sort">Sorter</label>
+          <select id="sort" name="sort" aria-label="Sortering">
+            <option value="name-asc">Navn A–Å</option>
+            <option value="name-desc">Navn Å–A</option>
+            <option value="category-asc">Kategori A–Å</option>
+          </select>
+      
+          <label class="toggle fav-toggle">
+            <input id="favsOnly" type="checkbox" />
+            <span>⭐ Favoritter</span>
+          </label>
+      
+          <!-- Kun synlig på mobil -->
+          <button type="button" id="filterToggle" class="btn-ghost">Flere filtre</button>
+        </div>
+      
+        <!-- Avanserte filtre (toggeles på mobil) -->
+        <div class="filters-advanced" id="filtersAdvanced">
+          <label class="sr-only" for="platform">Plattform</label>
+          <select id="platform" name="platform" aria-label="Filter for plattform">
+            <option value="">Alle plattformer</option>
+          </select>
+      
+          <label class="sr-only" for="language">Språk</label>
+          <select id="language" name="language" aria-label="Filter for språk">
+            <option value="">Alle språk</option>
+          </select>
+        </div>
+      </form>
 
       <nav id="catChips" class="chips" aria-label="Kategorier"></nav>
     </div>
