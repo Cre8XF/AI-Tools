@@ -427,5 +427,66 @@
     "platforms": [
       "Web"
     ]
-  }
+  },
+  {
+  "name": "Fotor AI Headshot Generator",
+  "slug": "fotor",
+  "category": "Bildegenerering",
+  "description": "Lag profesjonelle portrett-/headshot-bilder fra vanlige selfier – flere stiler.",
+  "url": "https://www.fotor.com/features/ai-headshot-generator/",
+  "review": "https://www.fotor.com/features/ai-headshot-generator/",
+  "pricing": "Gratis & Betalt",
+  "platforms": ["Web"],
+  "languages": ["Engelsk"],
+  "trial": { "available": true, "note": "Gratis prøving (lav oppløsning/vannmerke)" }
+},
+{
+  "name": "Remini",
+  "slug": "remini",
+  "category": "Bildegenerering",
+  "description": "Mobilapp for forbedring av portretter: skarphet, lys, ‘LinkedIn headshot’-presets.",
+  "url": "https://www.remini.ai/",
+  "review": "https://www.remini.ai/",
+  "pricing": "Gratis & Betalt",
+  "platforms": ["iOS", "Android"],
+  "languages": ["Engelsk"],
+  "trial": { "available": true, "note": "Daglige gratis credits" }
+},
+{
+  "name": "Picsart AI Tools",
+  "slug": "picsart",
+  "category": "Bildegenerering",
+  "description": "Enkel bilde-redigering i nettleser/mobil: bakgrunner, klær, lys, AI-effekter.",
+  "url": "https://picsart.com/",
+  "review": "https://picsart.com/",
+  "pricing": "Gratis & Betalt",
+  "platforms": ["Web", "iOS", "Android"],
+  "languages": ["Engelsk"],
+  "trial": { "available": true, "note": "Gratis med daglig begrensning" }
+},
+{
+  "name": "Hotpot.ai – AI Headshot Generator",
+  "slug": "hotpot-ai",
+  "category": "Bildegenerering",
+  "description": "Generer business-headshots fra vanlige selfier – mange stiler og bakgrunner.",
+  "url": "https://hotpot.ai/",
+  "review": "https://hotpot.ai/ai-headshots",
+  "pricing": "Gratis & Betalt",
+  "platforms": ["Web"],
+  "languages": ["Engelsk"],
+  "trial": { "available": true, "note": "Gratis lav oppløsning / vannmerke" }
+},
+{
+  "name": "TryitonAI",
+  "slug": "tryitonai",
+  "category": "Bildegenerering",
+  "description": "Realistiske business-portretter generert fra egne bilder – ‘studiolook’.",
+  "url": "https://www.tryitonai.com/",
+  "review": "https://www.tryitonai.com/",
+  "pricing": "Betalt (begrenset gratis)",
+  "platforms": ["Web"],
+  "languages": ["Engelsk"],
+  "trial": { "available": true, "note": "Noen gratis bilder/kampanjer – ellers betalt" }
+}
+
 ]
